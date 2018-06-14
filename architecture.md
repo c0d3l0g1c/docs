@@ -1,4 +1,5 @@
 
+
 # bigNEON Architecture
 
 This RFC describes the the overall architecture for the bigNEON ticketing platform.
@@ -93,6 +94,8 @@ The API will be supported by a MongoDB and Tari Blockchain backend, exposed as a
 ### Diagram
 
 ![Design](/docs/blob/feature/architecture/assets/Design.png "Design")
+
+The Ticket Purchasing Experience and Ticket Wallet & Transfers subsystems to integrate to and utilise the Tari Blockchain. The Tari Blockchain and a database (MongoDB or an RDBMS) will form the basis of the data access layer. The subsystems within the API will use the appropriate data access, based on feature requirements. In this case all digital asset management and transfers will be handled by the Tari Blockchain and everything else by the RDBMS.
 
 ## Conclusion
 
