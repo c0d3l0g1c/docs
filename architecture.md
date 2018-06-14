@@ -61,14 +61,14 @@ MongoDB alleviates the bloat typically found when dealing with ORM model classes
  - Scalable - MongoDB supports horizontal scaling through Sharding, distributing data across several machines and facilitating high throughput operations with large sets of data.
  - Flexible - Allows us to adapt and make changes quickly.
  - Secure - Supports the following security measures:
- -- Enable Access Control and Enforce Authentication
--- Configure Role-Based Access Control
--- Encrypt Communication
--- Encrypt and Protect Data
--- Limit Network Exposure
--- Audit System Activity
--- Run MongoDB with a Dedicated User
--- Run MongoDB with Secure Configuration Options
+ -- Access Control and Enforce Authentication
+ -- Role-Based Access Control
+ -- Encrypted Communication
+ -- Encrypted and Protect Data
+ -- Limit Network Exposure
+ -- Audit System Activity
+ -- Run MongoDB with a Dedicated User
+ -- Run MongoDB with Secure Configuration Options
 
 ## Architecture
 
@@ -80,7 +80,7 @@ All components written in Rust (including REST endpoint) and supported by a Mong
  4. **Independent of Database**. You can swap out Oracle or SQL Server, for Mongo, BigTable, CouchDB, or something else. Your business rules are not bound to the database.
  5. **Independent of any external agency**. In fact your business rules simply don’t know anything at all about the outside world.
 
-![enter image description here](/docs/blob/feature/architecture/assets/Clean Architecture.jpg "Clean Architecture")
+![Clean Architecture](/docs/blob/feature/architecture/assets/Clean Architecture.jpg "Clean Architecture")
 
 This will result in a logical design style, and:
 - Help our software system be extensible, reusable, maintainable, and adaptable.
@@ -88,11 +88,11 @@ This will result in a logical design style, and:
 - Help newcomers understand the business features and the functionalities of the system (because it is small enough).
 - Will lend itself well to multiple contributors working on different features.
 
-The API will be supported by a MongoDB (excluding Financial Transaction Data - blockchain) backend, exposed as a REST API (implemented with Tokenised Role Based Access and SSL) and consumed by Web and Mobile interfaces which exposes the interactive consumer functionality. The JSON payloads between the interfaces and API represent a fast and convenient medium for direct storage in MongoDB.
+The API will be supported by a MongoDB and Tari Blockchain backend, exposed as a secure REST API (implemented with Tokenised Role Based Access and SSL) and consumed by Web and Mobile interfaces which exposes the interactive consumer functionality. The JSON payloads between the interfaces and API represent a fast and convenient medium for direct storage in MongoDB.
 
 ### Diagram
 
-![enter image description here](/docs/blob/feature/architecture/assets/Design.png "Design")
+![Design](/docs/blob/feature/architecture/assets/Design.png "Design")
 
 ## Conclusion
 
